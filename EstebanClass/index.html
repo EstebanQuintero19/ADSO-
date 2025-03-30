@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bocanada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <img src="skull.jpg" alt="Logo">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button onclick="openModal()">Sign in</button>
+                <button>Sign up</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-1">
+            <!-- grid: four columns -->
+            <div class="row">
+                <div class="column">
+                    <img src="gus-cer-hat.jpg" alt="gustavo cerati" onclick="carrusel(this);">
+                </div>
+                <div class="column">
+                    <img src="gus-cer-poster.jpg" alt="gustavo cerati" onclick="carrusel(this);">
+                </div>
+                <div class="column">
+                    <img src="gus-cerati-black.jpg" alt="gustavo cerati" onclick="carrusel(this);">
+                </div>
+                <div class="column">
+                    <img src="gus-cerati.jpg" alt="gustavo cerati" onclick="carrusel(this);">
+                </div>
+            </div>
+
+            <!-- expanding image container -->
+            <div class="container">
+                <!-- close image -->
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+                <!-- Expanded image -->
+                <img id="expandedImg" style="width:100%">
+
+                <!-- Image text -->
+                <div id="imgtext"></div>
+            </div>
+        </section>
+
+        <section class="section-2"></section>
+
+        <section class="section-3">
+            <article>
+                Cuando no hay más que decirnos
+                Habla el humo, nada el humo
+                Y rema en espiral
+
+                Cuando no hay más que decirnos
+                Se abren al aire vacíos
+                Que dos no pueden respirar
+
+                Para desvanecerse, alargando el después
+                Trayectoria sin final
+                Distante placer, de una mirada
+                Frente a otra esfumándose
+
+                Cuando no hay más que decirnos
+                Me hago uno con el humo
+                Serpenteando la razón
+
+                De todo aquello decidido
+                Se estira el tiempo y me olvido
+                Me olvido como vos
+                Uhh, en la espera vagamos
+                Indiferentes, por el espacio
+                Que dejó    
+
+                Para desvanecerse, alargando el después
+                Una historia sin final
+                Distante placer, de una mirada
+                Frente a otra esfumándose <br>
+                (Letra de la canción "Bocanada" de Gustavo Cerati)
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Ventana Modal -->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <button class="close" onclick="closeModal()">&times;</button>
+            <h2>Iniciar sesión</h2>
+            <label for="usuario">Usuario</label>
+            <input type="text" id="inputUser" placeholder="Ingrese su usuario">
+            <label for="password">Contraseña</label>
+            <input type="password" id="inputPass" placeholder="Ingrese su contraseña">
+            <div class="modal-buttons">
+                <button id="btn-ingresar">Ingresar</button>
+                <button id="btn-limpiar" onclick="clearFields()">Limpiar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+    </footer>
+
+    <script>
+function openModal() {
+    document.getElementById('modal-login').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('modal-login').style.display = 'none';
+}
+
+function clearFields() {
+    document.getElementById('usuario').value = "";
+    document.getElementById('password').value = "";
+}
+
+function ingresar() {
+    if (inputUser.value == "admin@gmail" && inputPass.value == "admin") 
+    {
+        window.open("admin.html");
+    }
+}
+
+
+function carrusel(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+
+    </script>
+
+</body>
+</html>
