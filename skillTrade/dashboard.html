@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="/styles/dashboardStyles.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container-fluid p-0">
+        <div class="row h-100">
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-custom sidebar p-0">
+                <div class="position-sticky">
+                    <h4 class="text-center my-4 text-white">Admin Panel</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#dashboard">
+                                <i class="bi bi-house-door"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cursos">
+                                <i class="bi bi-book"></i> Cursos
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#usuarios">
+                                <i class="bi bi-person-circle"></i> Usuarios
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#intercambios">
+                                <i class="bi bi-arrow-repeat"></i> Intercambios
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ventas">
+                                <i class="bi bi-credit-card"></i> Ventas
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#configuracion">
+                                <i class="bi bi-gear"></i> Configuración
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mt-auto">
+                        <a class="nav-link text-danger" href="#">
+                            <i class="bi bi-box-arrow-right"></i> Cerrar sesión
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-4 py-4">
+                <div id="dashboard" class="section">
+                    <h1 class="h2">Dashboard</h1>
+                    <div class="row mb-4">
+                        <div class="col-md-4">
+                            <div class="card shadow-lg custom-card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Ganancias Mensuales</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-text">$40,000</h3>
+                                    <small>Desde el inicio del mes</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card shadow-lg custom-card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Ganancias Anuales</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-text">$215,000</h3>
+                                    <small>Este año hasta la fecha</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card shadow-lg custom-card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Usuarios Activos</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-text">1,250</h3>
+                                    <small>Usuarios actualmente registrados</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gráfico de Ganancias Mensuales -->
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h5 class="card-title">Ganancias por Mes</h5>
+                            <div class="card shadow-lg custom-card">
+                                <div class="card-body">
+                                    <canvas id="earningsChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Gráfico de Intercambios -->
+                        <div class="col-md-6">
+                            <h5 class="card-title">Intercambios por Mes</h5>
+                            <div class="card shadow-lg custom-card">
+                                <div class="card-body">
+                                    <canvas id="revenueSourcesChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lista de Cursos -->
+                <div id="cursos" class="section">
+                    <h1 class="h2">Lista de Cursos</h1>
+                    <!-- Contenedor para el botón (Centrado y abajo) -->
+                    <div class="d-flex flex-column justify-content-between" style="height: 100%;">
+                        <div>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="courses-list">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Curso de Python</td>
+                                        <td>$50</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></button>
+                                            <button class="btn btn-warning btn-sm"><i class="bi bi-pencil"></i></button>
+                                            <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Curso de Diseño Gráfico</td>
+                                        <td>$45</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm"><i class="bi bi-eye"></i></button>
+                                            <button class="btn btn-warning btn-sm"><i class="bi bi-pencil"></i></button>
+                                            <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- Botón Centrado Abajo -->
+                        <div class="text-center mt-auto">
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addCourseModal">Añadir Curso</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Usuarios -->
+                <div id="usuarios" class="section">
+                    <h1 class="h2">Usuarios</h1>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Juan Pérez</td>
+                                <td>juan@example.com</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm"><i class="bi bi-pencil"></i></button>
+                                    <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ana Gómez</td>
+                                <td>ana@example.com</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm"><i class="bi bi-pencil"></i></button>
+                                    <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Ventas -->
+                <div id="ventas" class="section">
+                    <h1 class="h2">Ventas</h1>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="card shadow-lg custom-card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Ventas Totales</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-text">$500,000</h3>
+                                    <small>Total vendido este año</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card shadow-lg custom-card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Ventas del Último Mes</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-text">$45,000</h3>
+                                    <small>Ventas realizadas en el mes pasado</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Configuración -->
+                <div id="configuracion" class="section">
+                    <h1 class="h2">Configuración</h1>
+                    <div class="card shadow-lg custom-card mb-4">
+                        <div class="card-header">
+                            <h5 class="card-title">Opciones de Configuración</h5>
+                        </div>
+                        <div class="card-body">
+                            <button class="btn btn-primary mb-2">Editar Configuración General</button>
+                            <button class="btn btn-secondary mb-2">Administrar Roles de Usuario</button>
+                            <button class="btn btn-warning mb-2">Modificar Políticas de Precios</button>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal para añadir curso -->
+    <div class="modal fade" id="addCourseModal" tabindex="-1" aria-labelledby="addCourseModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addCourseModalLabel">Añadir Nuevo Curso</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addCourseForm">
+                        <div class="mb-3">
+                            <label for="courseName" class="form-label">Nombre del Curso</label>
+                            <input type="text" class="form-control" id="courseName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="coursePrice" class="form-label">Precio del Curso</label>
+                            <input type="number" class="form-control" id="coursePrice" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const ctxEarnings = document.getElementById('earningsChart').getContext('2d');
+        const earningsChart = new Chart(ctxEarnings, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Ganancias Mensuales',
+                    data: [40000, 42000, 45000, 48000, 50000, 52000, 53000, 54000, 57000, 60000, 62000, 65000],
+                    borderColor: '#3b1757',
+                    fill: false,
+                    tension: 0.1
+                }]
+            }
+        });
+
+        const ctxRevenue = document.getElementById('revenueSourcesChart').getContext('2d');
+        const revenueSourcesChart = new Chart(ctxRevenue, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Intercambios Mensuales',
+                    data: [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160],
+                    borderColor: '#303030',
+                    fill: false,
+                    tension: 0.1
+                }]
+            }
+        });
+
+        document.getElementById('addCourseForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let courseName = document.getElementById('courseName').value;
+            let coursePrice = document.getElementById('coursePrice').value;
+
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>3</td>
+                <td>${courseName}</td>
+                <td>${coursePrice}</td>
+                <td>
+                    <button class="btn btn-primary btn-sm"><i class="bi bi-eye"></i> Ver</button>
+                    <button class="btn btn-warning btn-sm"><i class="bi bi-pencil"></i> Editar</button>
+                    <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i> Eliminar</button>
+                </td>
+            `;
+            document.querySelector('#courses-list').appendChild(newRow);
+            $('#addCourseModal').modal('hide');
+        });
+    </script>
+</body>
+</html>

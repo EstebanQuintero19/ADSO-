@@ -1,0 +1,206 @@
+.carousel-inner img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.card {
+    height: 100%;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+body {
+    padding-top: 50px;
+}
+
+.navbar-brand {
+    font-size: 1.75em;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-size: 1em;
+    color: #ffffff !important;
+    margin-right: 15px;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+    color: #7c648f !important;
+}
+
+.navbar {
+    background-color: #303030 !important;
+    padding: 15px 20px;
+}
+
+.dropdown-menu {
+    background-color: #424242;
+    border: none;
+}
+
+.dropdown-item {
+    color: #ffffff;
+}
+
+.dropdown-item:hover {
+    background-color: #2d3436;
+    color: #7c648f;
+}
+
+.btn-outline-dark {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.btn-outline-dark:hover {
+    background-color: #ffffff;
+    color: #303030;
+}
+
+.btn-outline-primary {
+    border-color: #7c648f;
+    color: #7c648f;
+}
+
+.btn-outline-primary:hover {
+    background-color: #7c648f;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #7c648f;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #7c648f;
+}
+
+footer {
+    background-color: #212121;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: #fff;
+    margin: 0;
+}
+
+.btn-tgroup button {
+    margin: 0 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-course {
+    background-color: transparent;
+    color: #303030;
+    border: 2px solid #303030;
+    padding: 10px 25px;
+    font-weight: 500;
+    font-size: 1em;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-course:hover {
+    background-color: #303030;
+    color: white;
+    border-color: #303030;
+}
+
+.btn-cta {
+    background-color: #6c2bd9;
+    color: #ffffff;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(108, 43, 217, 0.4);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-cta:hover {
+    background-color: #5920b5;
+    box-shadow: 0 6px 16px rgba(108, 43, 217, 0.6);
+    transform: scale(1.03);
+}
+
+.btn-tomar-curso {
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1.5;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 1em 2em;
+    letter-spacing: 0.05rem;
+    color: #6c2bd9;
+    box-shadow: inset 0 0 0 4px #6c2bd9;
+    position: relative;
+    transition: color 0.25s 0.083s;
+}
+
+.btn-tomar-curso::before,
+.btn-tomar-curso::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    pointer-events: none;
+    bottom: 0;
+    right: 0;
+}
+
+.btn-tomar-curso::before {
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+}
+
+.btn-tomar-curso::after {
+    border-top-width: 4px;
+    border-right-width: 4px;
+}
+
+.btn-tomar-curso:hover {
+    color: #3b1757;
+}
+
+.btn-tomar-curso:hover::before,
+.btn-tomar-curso:hover::after {
+    border-color: #3b1757;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-tomar-curso:hover::before {
+    transition-delay: 0s, 0s, 0.25s;
+}
+
+.btn-tomar-curso:hover::after {
+    transition-delay: 0s, 0.25s, 0s;
+    background-color: #3b175749;
+}
