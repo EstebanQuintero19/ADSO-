@@ -1,0 +1,177 @@
+/* Tablet */
+@media (max-width: 991.98px) {
+    .hero-banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content-glass {
+        padding: 1.5rem 2rem;
+    }
+
+    .card img {
+        height: 180px;
+    }
+
+    .navbar .nav-link {
+        margin-right: 8px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Teléfonose */
+@media (max-width: 767.98px) {
+    .hero-banner h1 {
+        font-size: 2rem;
+    }
+
+    .hero-banner {
+        padding: 3rem 1rem;
+        min-height: 60vh;
+    }
+
+    .hero-content-glass {
+        padding: 1.2rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .carousel-inner img,
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .btn-tomar-curso,
+    .btn-banner,
+    .btn-login {
+        font-size: 0.95rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .topics-wrapper {
+        max-height: none;
+        overflow: visible;
+        padding: 1rem;
+    }
+
+    .topics-track {
+        flex-wrap: wrap;
+        animation: none;
+        justify-content: center;
+    }
+
+    .card-title-tittle,
+    .card-subtitle-limit {
+        min-height: auto;
+    }
+
+    .container,
+    .card,
+    .hero-content-glass {
+        width: 100% !important;
+    }
+
+    .course-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-user {
+        width: 70px;
+        height: 70px;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1200px) {
+    .hero-banner h1 {
+        font-size: 4rem;
+    }
+
+    .hero-content-glass {
+        max-width: 900px;
+        padding: 3rem 4rem;
+    }
+
+    .btn-tomar-curso,
+    .btn-banner {
+        font-size: 1.2rem;
+        padding: 1rem 2.5rem;
+    }
+
+    .carrousel-title {
+        font-size: 2.8rem;
+    }
+
+    .carrousel-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .card-title-tittle h4 {
+        font-size: 1.25rem;
+    }
+
+    .card-subtitle-limit h6 {
+        font-size: 1rem;
+    }
+}
+
+/* Pantallas muy grandes */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+
+    .hero-banner {
+        padding: 8rem 3rem;
+    }
+
+    .hero-banner h1 {
+        font-size: 4.5rem;
+    }
+
+    .hero-content-glass {
+        max-width: 1000px;
+    }
+
+    .btn-tomar-curso,
+    .btn-banner {
+        font-size: 1.3rem;
+    }
+
+    .image-user {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .hero-content-glass h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-content-glass p {
+        font-size: 1.4rem;
+    }
+
+    .hero-content-glass {
+        max-width: 1000px;
+        padding: 3rem 4rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .hero-banner {
+        min-height: 85vh;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}

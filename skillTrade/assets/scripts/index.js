@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Login form handler
     const loginForm = document.getElementById("loginForm");
 
     loginForm.addEventListener("submit", function (e) {
@@ -36,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (email === "admin@gmail.com" && password === "admin123") {
-            window.location.href = "assets/pages/adminpanel.html";
+            window.location.href = "adminpanel.html";
         } else {
             alert("Correo o contraseña incorrectos.");
         }
