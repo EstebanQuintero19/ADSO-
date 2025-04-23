@@ -6,14 +6,14 @@
     --blanco: #f5f5f5;
     --sombra: rgba(90, 45, 123, 0.15);
     --neon: 0 0 6px rgba(174, 123, 255, 0.6);
-    --transicion: all 0.3s ease-in-out;
+    --transicion: all 0.3s ease-in-out
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     background-color: var(--blanco);
     color: var(--negro-gris);
-    transition: var(--transicion);
+    transition: var(--transicion)
 }
 
 h1,
@@ -21,22 +21,20 @@ h2,
 h3,
 h4,
 h5 {
-    color: var(--morado);
+    color: var(--morado)
 }
 
-/* HEADER */
 header.bg-gradient {
     background: linear-gradient(to right, var(--morado), var(--morado-claro));
-    color: white;
+    color: #fff;
     padding: 1.2rem 2rem;
-    box-shadow: 0 2px 10px var(--sombra);
+    box-shadow: 0 2px 10px var(--sombra)
 }
 
-/* SIDEBAR */
 #sidebar {
     background-color: var(--morado);
     height: 100vh;
-    padding-top: 20px;
+    padding-top: 20px
 }
 
 #sidebar .nav-link {
@@ -44,126 +42,120 @@ header.bg-gradient {
     padding: 12px 20px;
     font-size: 1.05rem;
     border-left: 4px solid transparent;
-    transition: background 0.3s ease, border-left 0.3s ease;
+    transition: background .3s ease, border-left .3s ease
 }
 
 #sidebar .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-left: 4px solid #fff;
+    background-color: rgba(255, 255, 255, .05);
+    border-left: 4px solid #fff
 }
 
 #sidebar .nav-link.active {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, .15);
     border-left: 4px solid #fff;
-    font-weight: bold;
-    text-shadow: var(--neon);
+    font-weight: 700;
+    text-shadow: var(--neon)
 }
 
-/* SECCIONES */
 .section {
     display: none;
     opacity: 0;
     transform: translateY(10px);
-    transition: all 0.3s ease-in-out;
+    transition: all .3s ease-in-out
 }
 
 .section.active {
     display: block;
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0)
 }
 
-/* CARDS */
 .card {
     background-color: #fff;
     border: none;
     border-radius: 12px;
     box-shadow: 0 8px 20px var(--sombra);
-    transition: transform 0.3s ease;
+    transition: transform .3s ease
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px)
 }
 
 .card-header {
     background-color: var(--morado);
-    color: white;
+    color: #fff;
     font-weight: 600;
-    border-radius: 12px 12px 0 0;
+    border-radius: 12px 12px 0 0
 }
 
-/* TABLA */
 .table th {
     background-color: var(--morado);
-    color: white;
+    color: #fff
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-    background-color: var(--gris-claro);
+    background-color: var(--gris-claro)
 }
 
-/* BOTONES */
 .btn {
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color .3s ease, transform .2s ease
 }
 
 .btn:hover {
-    transform: scale(1.02);
+    transform: scale(1.02)
 }
 
 .btn-primary {
     background-color: var(--morado);
-    border: none;
+    border: none
 }
 
 .btn-primary:hover {
     background-color: var(--morado-claro);
-    box-shadow: var(--neon);
+    box-shadow: var(--neon)
 }
 
+.btn-danger,
 .btn-success,
-.btn-warning,
-.btn-danger {
-    transition: var(--transicion);
+.btn-warning {
+    transition: var(--transicion)
 }
 
+.btn-danger:hover,
 .btn-success:hover,
-.btn-warning:hover,
-.btn-danger:hover {
+.btn-warning:hover {
     transform: translateY(-1px);
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 6px rgba(0, 0, 0, .15)
 }
 
-/* MODAL */
 .modal-content {
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .2)
 }
 
 .btn-close {
     background-color: var(--gris-claro);
     border-radius: 50%;
-    padding: 6px;
+    padding: 6px
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width:768px) {
     #sidebar {
-        height: auto;
+        height: auto
     }
 
     header.bg-gradient {
         flex-direction: column;
         align-items: flex-start;
-        text-align: center;
+        text-align: center
     }
 }
 
 .btn-group .btn {
-    margin-right: 5px;
+    margin-right: 5px
 }
 
 .btn-group .btn:last-child {
-    margin-right: 0;
+    margin-right: 0
 }

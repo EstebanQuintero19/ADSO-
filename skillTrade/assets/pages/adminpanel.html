@@ -44,13 +44,12 @@
               <a class="nav-link" href="#configuracion"><i class="bi bi-gear"></i> Configuración</a>
             </li>
             <li class="nav-item mt-5">
-              <a class="nav-link text-danger" href="#"><i class="bi bi-box-arrow-right"></i> Cerrar sesión</a>
+              <a class="nav-link text-danger" href="#" id="logoutLink"><i class="bi bi-box-arrow-right"></i> Cerrar sesión</a>
             </li>
           </ul>
         </div>
       </nav>
 
-      <!-- Main -->
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
         <div id="dashboard" class="section">
           <h3 class="mb-4 fw-bold">Dashboard</h3>
@@ -494,6 +493,25 @@
             <button type="submit" class="btn btn-primary">Guardar Propuesta</button>
           </div>
         </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- cierre sesión -->
+<div class="modal fade" id="logoutConfirmModal" tabindex="-1" aria-labelledby="logoutConfirmLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title" id="logoutConfirmLabel"><i class="bi bi-box-arrow-right"></i> Confirmar cierre de sesión</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        ¿Estás segur@ que deseas cerrar sesión?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" id="confirmLogoutBtn">Cerrar sesión</button>
       </div>
     </div>
   </div>

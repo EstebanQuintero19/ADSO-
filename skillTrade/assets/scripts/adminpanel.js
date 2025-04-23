@@ -164,3 +164,22 @@ document.addEventListener("DOMContentLoaded", () => {
         userForm.reset();
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const logoutLink = document.getElementById("logoutLink");
+    const confirmLogoutBtn = document.getElementById("confirmLogoutBtn");
+    const logoutModal = new bootstrap.Modal(document.getElementById("logoutConfirmModal"));
+
+    if (logoutLink) {
+        logoutLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            logoutModal.show();
+        });
+    }
+
+    if (confirmLogoutBtn) {
+        confirmLogoutBtn.addEventListener("click", () => {
+            window.location.href = "../../index.html"; 
+        });
+    }
+});
