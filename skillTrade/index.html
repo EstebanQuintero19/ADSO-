@@ -29,13 +29,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#destacados">Destacados</a>
+                        <a class="nav-link" href="#destacados" id="featured">Destacados</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#valorados">Más valorados</a>
+                        <a class="nav-link" href="#valorados" id="rated">Más valorados</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#testimonios">Testimonios</a>
+                        <a class="nav-link" href="#testimonios" id="testimonial">Testimonios</a>
                     </li>
                 </ul>
                     <button class="btn btn-outline-primary me-2 bton-login" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar Sesión</button>
@@ -112,7 +112,7 @@
 
 
         <!-- Cursos destacados -->
-    <div class="container py-5 importan-courses">
+    <div class="container py-5 importan-courses" id="destacados">
         <div class="row mb-4">
             <div class="col text-center">
                 <h2 class="fw-bolder mb-0">Cursos destacados</h2>
@@ -167,7 +167,7 @@
 
 
         <!-- Cursos recomendados por valoración -->
-    <div class="container py-5 importan-courses">
+    <div class="container py-5 importan-courses" id="valorados">
         <div class="row mb-4">
             <div class="col text-center">
                 <h2 class="fw-bolder mb-0">Cursos recomendados por valoración</h2>
@@ -224,7 +224,7 @@
 
 
         <!-- topics -->
-        <section class="container py-5 recommended-topics">
+        <section class="container py-5 recommended-topics" id="temas">
             <h2 class="fw-bold mb-4">Temas recomendados para ti</h2>
             <div class="topics-wrapper">
                 <div class="topics-fade left-fade"></div>
@@ -284,7 +284,7 @@
 
         <!-- Nuestros usuarios -->
 
-        <section class="container py-5 testimonios-section">
+        <section class="container py-5 testimonios-section" id="testimonios">
             <h2 class="mb-4 text-center fw-bold neon-text">¿Qué dicen quienes aprenden con SkillTrade?</h2>
             <div class="row g-4">
                 <div class="col-md-4">
@@ -419,6 +419,11 @@
             </div>
         </div>
     </div>
+    <button onclick="scrollToTop()" id="btn-scroll-top" class="btn btn-primary position-fixed"
+    style="bottom: 80px; right: 20px; z-index: 9999; display: none;">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
 <footer class="text-center py-4">
         <p>&copy; 2025 SKILLTRADE. Skill to be better</p>
     </footer>

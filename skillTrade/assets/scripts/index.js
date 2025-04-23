@@ -49,3 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+window.addEventListener("scroll", () => {
+    const scrollTopBtn = document.getElementById("btn-scroll-top");
+    scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+});
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
