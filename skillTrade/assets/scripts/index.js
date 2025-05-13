@@ -58,16 +58,16 @@ document.addEventListener("DOMContentLoaded", () => {
       const price = parseFloat(priceText.replace(/[^\d]/g, ""));
       cart.push({ title, price });
 
-      // 2) Mostrar badge
+      // badge
       badgeEl.innerText = cart.length;
       badgeEl.classList.toggle("d-none", cart.length === 0);
 
-      // 3) Mostrar toast
+      // toast
       new bootstrap.Toast(toastEl).show();
     });
   });
 
-  // 4) Renderizar carrito cuando se abra el modal
+  // 4) Renderizar carrito
   cartModalEl.addEventListener("show.bs.modal", () => {
     cartList.innerHTML = "";
     cart.forEach((item) => {
