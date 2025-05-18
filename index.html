@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/styles/landing.css">
+    <link rel="stylesheet" href="assets/styles/landing-darkmode.css">
+    <link rel="stylesheet" href="assets/styles/landing-responsive.css">
+    <title>SKILLTRADE</title>
+</head>
+
+<body>
+    <button id="toggle-darkmode" class="btn btn-sm btn-light position-fixed"
+        style="bottom: 20px; left: 20px; z-index: 9999;">
+        <i class="bi bi-moon-fill"></i>
+    </button>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow-sm">
+            <div class="container-fluid navitagion">
+                <a class="navbar-brand fw-bold" href="#">SKILLTRADE</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#destacados" id="featured">Destacados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#valorados" id="rated">Más valorados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonios" id="testimonial">Testimonios</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline-primary me-2 bton-login" data-bs-toggle="modal"
+                        data-bs-target="#cartModal">
+                        <i class="bi bi-cart"></i>
+                        <span id="cart-count"
+        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    0
+                    </button>
+                    <button class="btn btn-outline-primary me-2 bton-login" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Iniciar Sesión</button>
+                    <button class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#registerModal">Registrarse</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid hero-banner">
+            <div class="hero-content-glass">
+                <h1>¡Bienvenid@ a <span class="highlight">SKILLTRADE</span>!</h1>
+                <p>¿Tienes habilidades para compartir? ¿O ganas de aprender algo nuevo?<br>¡Aquí puedes ser estudiante y
+                    maestro al mismo tiempo! 🎓 🤝</p>
+                <p>Comparte tu talento, descubre nuevos conocimientos y haz que el aprendizaje sea una aventura épica.
+                </p>
+                <div class="btn-container">
+                    <a href="#" class="btn-banner">¡Empieza tu viaje ahora!</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <main>
+        <div class="container py-5 main-course">
+            <div class="container py-5 element-carrousel-content">
+                <div class="row align-items-center course-section">
+                    <!-- Carrusel -->
+                    <div class="col-md-6 rounded-image">
+                        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/images/david-bowie-guitarra.jpg" class="d-block w-100"
+                                        alt="Imagen de guitarra-blanco-negro">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/images/guitarrista.jpg" class="d-block w-100"
+                                        alt="Imagen de guitarra-blanco-negro">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/images/partituras.jpg" class="d-block w-100"
+                                        alt="Imagen de guitarra">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/images/pianista.webp" class="d-block w-100"
+                                        alt="Imagen de guitarra">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/images/tocadiscos.webp" class="d-block w-100"
+                                        alt="Imagen de guitarra">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Contenido -->
+                    <div class="col-md-5 info-course-carrousel">
+                        <h2 class="carrousel-title fw-bolder">¿Te interesa la música?</h2>
+                        <p class="carrousel-subtitle">Cada nota es un viaje. Deja que la música te guíe, conecta con tu
+                            esencia y transforma tu talento en armonía que inspire a otros.</p>
+                        <div class="course-tags">
+                            <span class="tag">Creativo</span>
+                            <span class="tag">Música</span>
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn-tomar-curso">TOMAR CURSO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        <!-- Cursos destacados -->
+        <div class="container py-5 importan-courses" id="destacados">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2 class="fw-bolder mb-0">Cursos destacados</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card p-3 d-flex flex-column h-100 card-course">
+                        <img src="assets/images/clean-compu.jpg" alt="guitarra y partituras">
+                        <div class="card-text-wrapper">
+                            <div class="card-title-tittle">
+                                <h4 class="fw-semibold">LIMPIEZA DE COMPONENTES TECNOLÓGICOS</h4>
+                            </div>
+                            <div class="course-rating mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star text-warning"></i>
+                                <span class="ms-2 text-muted">(4.0)</span>
+                            </div>
+                            <div class="card-subtitle-limit">
+                                <h6 class="fw-semibold">Aprende a limpiar hardware sin dañarlo</h6>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto btn-action">
+                            <button type="button" class="btn btn-primary btn-price">
+                                COP 80.000
+                            </button>
+                            <button type="button" class="btn btn-primary btn-cart" data-bs-toggle="modal"
+                                data-bs-target="#cartModal">
+                                <i class="bi bi-cart"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card p-3 d-flex flex-column h-100 card-course">
+                        <img src="assets/images/human-anatomy-scketch.webp" alt="cráneos e ilustraciones realistas">
+                        <div class="card-text-wrapper">
+                            <div class="card-title-tittle">
+                                <h4 class="fw-semibold">APRENDE ANATOMÍA REALISTA PARA TUS DIBUJOS</h4>
+                            </div>
+                            <div class="course-rating mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-half text-warning"></i>
+                                <span class="ms-2 text-muted">(4.5)</span>
+                            </div>
+                            <div class="card-subtitle-limit">
+                                <h6 class="fw-semibold">Dale un enfoque realista a tus personajes, dándoles una
+                                    identidad al momento de bosquejarlos.</h6>
+                            </div>
+                        </div>
+                        <div class="mt-auto btn-action">
+                            <button type="button" class="btn btn-primary btn-price">
+                                COP 110.000
+                            </button>
+                            <button type="button" class="btn btn-primary btn-cart" data-bs-toggle="modal"
+                                data-bs-target="#cartModal">
+                                <i class="bi bi-cart"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3 d-flex flex-column h-100 card-course">
+                        <img src="assets/images/tabla-animaciones.webp" alt="dibujos animados">
+                        <div class="card-text-wrapper">
+                            <div class="card-title-tittle">
+                                <h4 class="fw-semibold">MAQUETADO Y PLANEACIÓN DE ANIMACIÓN</h4>
+                            </div>
+                            <div class="course-rating mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star text-warning"></i>
+                                <span class="ms-2 text-muted">(4.0)</span>
+                            </div>
+                            <div class="card-subtitle-limit">
+                                <h6 class="fw-semibold">Comienza desde lo básico hasta poder dirigir cada animación.
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="mt-auto btn-action">
+                            <button type="button" class="btn btn-primary btn-price">
+                                COP 100.000
+                            </button>
+                            <button type="button" class="btn btn-primary btn-cart" data-bs-toggle="modal"
+                                data-bs-target="#cartModal">
+                                <i class="bi bi-cart"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Cursos recomendados por valoración -->
+        <div class="container py-5 importan-courses" id="valorados">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2 class="fw-bolder mb-0">Cursos recomendados por valoración</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card p-3 d-flex flex-column h-100 card-course">
+                        <img src="assets/images/java-develop.webp" alt="programación avanzada">
+                        <div class="card-text-wrapper">
+                            <div class="card-title-tittle">
+                                <h4 class="fw-semibold">PROGRAMACIÓN AVANZADA EN JAVA</h4>
+                            </div>
+                            <div class="course-rating mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <span class="ms-2 text-muted">(5.0)</span>
+                            </div>
+                            <div class="card-subtitle-limit">
+                                <h6 class="fw-semibold">Domina estructuras complejas, conexiones a bases de datos y
+                                    patrones de diseño.</h6>
+                            </div>
+                        </div>
+                        <div class="mt-auto btn-action">
+                            <button type="button" class="btn btn-primary btn-price">
+                                COP 200.000
+                            </button>
+                            <button type="button" class="btn btn-primary btn-cart" data-bs-toggle="modal"
+                                data-bs-target="#cartModal">
+                                <i class="bi bi-cart"></i>
+                            </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-3 d-flex flex-column h-100 card-course">
+                    <img src="assets/images/figma-ui.jpg" alt="UX diseño de interfaces">
+                    <div class="card-text-wrapper">
+                        <div class="card-title-tittle">
+                            <h4 class="fw-semibold">DISEÑO UX/UI CON FIGMA</h4>
+                        </div>
+                        <div class="course-rating mb-2">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-half text-warning"></i>
+                            <span class="ms-2 text-muted">(4.7)</span>
+                        </div>
+                        <div class="card-subtitle-limit">
+                            <h6 class="fw-semibold">Aprende a diseñar interfaces atractivas y funcionales con
+                                enfoque en el usuario.</h6>
+                        </div>
+                    </div>
+                    <div class="mt-auto btn-action">
+                        <button type="button" class="btn btn-primary btn-price">
+                            COP 180.000
+                        </button>
+                        <button type="button" class="btn btn-primary btn-cart" data-bs-toggle="modal"
+                            data-bs-target="#cartModal">
+                            <i class="bi bi-cart"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-3 d-flex flex-column h-100 card-course">
+                    <img src="assets/images/digital-marketing.jpg" alt="SEO y marketing">
+                    <div class="card-text-wrapper">
+                        <div class="card-title-tittle">
+                            <h4 class="fw-semibold">SEO Y MARKETING DIGITAL</h4>
+                        </div>
+                        <div class="course-rating mb-2">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-half text-warning"></i>
+                            <span class="ms-2 text-muted">(4.8)</span>
+                        </div>
+                        <div class="card-subtitle-limit">
+                            <h6 class="fw-semibold">Posiciona tu web en buscadores, optimiza campañas y mide
+                                resultados.</h6>
+                        </div>
+                    </div>
+                    <div class="mt-auto btn-action">
+                        <button type="button" class="btn btn-primary btn-price">
+                            COP 130.000
+                        </button>
+                        <button type="button" class="btn btn-primary btn-cart" data-bs-toggle="modal"
+                            data-bs-target="#cartModal">
+                            <i class="bi bi-cart"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+        <!-- topics -->
+        <section class="container py-5 recommended-topics" id="temas">
+            <h2 class="fw-bold mb-4">Temas recomendados para ti</h2>
+            <div class="topics-wrapper">
+                <div class="topics-fade left-fade"></div>
+                <div class="topics-fade right-fade"></div>
+                <div class="topics-track">
+                    <div class="scroll-content">
+                        <a href="#" class="btn-tema">Educación ambiental</a>
+                        <a href="#" class="btn-tema">Diseño gráfico</a>
+                        <a href="#" class="btn-tema">Python</a>
+                        <a href="#" class="btn-tema">Historia del arte</a>
+                        <a href="#" class="btn-tema">Marketing digital</a>
+                        <a href="#" class="btn-tema">Mindfulness</a>
+                        <a href="#" class="btn-tema">Música</a>
+                        <a href="#" class="btn-tema">Emprendimiento</a>
+                        <a href="#" class="btn-tema">Redacción creativa</a>
+                        <a href="#" class="btn-tema">Salud y nutrición</a>
+                        <a href="#" class="btn-tema">Bases de datos</a>
+                        <a href="#" class="btn-tema">Idiomas</a>
+                        <a href="#" class="btn-tema">Dibujo</a>
+                        <a href="#" class="btn-tema">Jardinería</a>
+                        <a href="#" class="btn-tema">Programación</a>
+                        <a href="#" class="btn-tema">Diseño</a>
+                        <a href="#" class="btn-tema">Ciencia de datos</a>
+                        <a href="#" class="btn-tema">Astronomía</a>
+                        <a href="#" class="btn-tema">Blockchain</a>
+                        <a href="#" class="btn-tema">Robótica</a>
+                        <a href="#" class="btn-tema">UX/UI</a>
+                        <a href="#" class="btn-tema">Cocina saludable</a>
+                        <!-- Duplicado -->
+                        <a href="#" class="btn-tema">Educación ambiental</a>
+                        <a href="#" class="btn-tema">Diseño gráfico</a>
+                        <a href="#" class="btn-tema">Python</a>
+                        <a href="#" class="btn-tema">Historia del arte</a>
+                        <a href="#" class="btn-tema">Marketing digital</a>
+                        <a href="#" class="btn-tema">Mindfulness</a>
+                        <a href="#" class="btn-tema">Música</a>
+                        <a href="#" class="btn-tema">Emprendimiento</a>
+                        <a href="#" class="btn-tema">Redacción creativa</a>
+                        <a href="#" class="btn-tema">Salud y nutrición</a>
+                        <a href="#" class="btn-tema">Bases de datos</a>
+                        <a href="#" class="btn-tema">Idiomas</a>
+                        <a href="#" class="btn-tema">Dibujo</a>
+                        <a href="#" class="btn-tema">Jardinería</a>
+                        <a href="#" class="btn-tema">Programación</a>
+                        <a href="#" class="btn-tema">Diseño</a>
+                        <a href="#" class="btn-tema">Ciencia de datos</a>
+                        <a href="#" class="btn-tema">Astronomía</a>
+                        <a href="#" class="btn-tema">Blockchain</a>
+                        <a href="#" class="btn-tema">Robótica</a>
+                        <a href="#" class="btn-tema">UX/UI</a>
+                        <a href="#" class="btn-tema">Cocina saludable</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Nuestros usuarios -->
+
+        <section class="container py-5 testimonios-section" id="testimonios">
+            <h2 class="mb-4 text-center fw-bold neon-text">¿Qué dicen quienes aprenden con SkillTrade?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/images/human-profile-purple.png" alt="usuario 1"
+                                class="rounded-circle me-3">
+                            <strong>Arturo M.</strong>
+                        </div>
+                        <p>"Gracias a SkillTrade, encontré una forma de aprender guitarra eléctrica a mi ritmo. ¡Ahora
+                            incluso intercambio clases con otros músicos!"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/images/human-profile-red.png" alt="usuario 2" class="rounded-circle me-3">
+                            <strong>Santiago R.</strong>
+                        </div>
+                        <p>"Estaba buscando mejorar en programación. No solo aprendí, también compartí mi curso de Java
+                            a cambio de uno de dibujo digital."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/images/human-profile-green.png" alt="usuario 3"
+                                class="rounded-circle me-3">
+                            <strong>Camilo P.</strong>
+                        </div>
+                        <p>"Me encantó la libertad de aprender lo que quiero, cuando quiero. SkillTrade es una comunidad
+                            que de verdad cree en el conocimiento libre."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Modal de Inicio de Sesión -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content position-relative">
+
+                    <button type="button" class="btn-close position-absolute top-0 end-0 m-3 z-3"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+
+                    <div class="modal-body p-5">
+                        <div class="text-center mb-4 image-login-user">
+                            <img class="image-user" src="assets/images/human-profile-purple.png"
+                                alt="Foto de perfil de ejemplo">
+                        </div>
+
+                        <div class="container-title-login-modal">
+                            <h5 id="loginModalLabel" class="text-center fw-bolder mb-2 title-login-modal">¡Bienvenido!
+                            </h5>
+                        </div>
+
+                        <form id="loginForm" novalidate>
+                            <div class="form-group mb-3 position-relative">
+                                <input type="email" id="email" name="email" class="form-control input-icon"
+                                    placeholder="name@mail.com" required>
+                                <i class="bi bi-envelope icon-left"></i>
+                            </div>
+                            <div class="form-group mb-3 position-relative">
+                                <input type="password" id="password" name="password" class="form-control input-icon"
+                                    placeholder="Contraseña" required>
+                                <i class="bi bi-lock icon-left"></i>
+                            </div>
+                            <button type="submit" class="btn btn-login w-100">Iniciar sesión</button>
+                            <div class="divider my-3 text-center text-muted">
+                                <span class="px-2">O</span>
+                            </div>
+                            <button type="button" class="btn btn-outline-secondary w-100 google-btn">
+                                <i class="bi bi-google me-2"></i> Iniciar con Google
+                            </button>
+
+                            <p class="text-center mt-3">¿Aún no tienes cuenta?
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal"
+                                    data-bs-dismiss="modal">Registrarse</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Registro -->
+        <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content position-relative">
+
+
+                    <button type="button" class="btn-close position-absolute top-0 end-0 m-3 z-3"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+
+                    <div class="modal-body p-5">
+
+                        <div class="text-center mb-4 image-login-user">
+                            <img class="image-user" src="assets/images/logo_skill.png" alt="Foto de perfil de ejemplo">
+                        </div>
+
+
+                        <div class="container-title-login-modal">
+                            <h5 id="registerModalLabel" class="text-center fw-bolder mb-2 title-login-modal">¡Crea tu
+                                cuenta!</h5>
+                        </div>
+
+
+                        <form id="registerForm" novalidate>
+                            <div class="form-group mb-3 position-relative">
+                                <input type="email" id="registerEmail" name="email" class="form-control input-icon"
+                                    placeholder="name@mail.com" required>
+                                <i class="bi bi-envelope icon-left"></i>
+                            </div>
+                            <div class="form-group mb-3 position-relative">
+                                <input type="password" id="registerPassword" name="password"
+                                    class="form-control input-icon" placeholder="Contraseña" required>
+                                <i class="bi bi-lock icon-left"></i>
+                            </div>
+                            <div class="form-group mb-3 position-relative">
+                                <input type="password" id="confirmPassword" name="confirmPassword"
+                                    class="form-control input-icon" placeholder="Confirmar contraseña" required>
+                                <i class="bi bi-shield-lock icon-left"></i>
+                            </div>
+
+
+                            <button type="submit" class="btn btn-login w-100">Registrarse</button>
+
+
+                            <div class="divider my-3 text-center text-muted">
+                                <span class="px-2">O</span>
+                            </div>
+
+
+                            <button type="button" class="btn btn-outline-secondary w-100 google-btn">
+                                <i class="bi bi-google me-2"></i> Registrarse con Google
+                            </button>
+
+
+                            <p class="text-center mt-3">¿Ya tienes cuenta?
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"
+                                    data-bs-dismiss="modal">Inicia sesión</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button onclick="scrollToTop()" id="btn-scroll-top" class="btn btn-primary position-fixed"
+            style="bottom: 80px; right: 20px; z-index: 9999; display: none;">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+
+
+        <!-- Modal del Carrito -->
+        <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold" id="cartModalLabel">Tu Carrito</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul id="cart-items" class="list-group mb-3">
+                        </ul>
+                        <div class="d-flex justify-content-between fw-bold">
+                            <span>Total:</span>
+                            <span id="cart-total">COP 0</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Seguir comprando
+                        </button>
+                        <button type="button" class="btn btn-primary btn-cart">
+                            Proceder al pago
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1050;">
+            <div id="addedToast" class="toast align-items-center text-bg-success border-0" role="alert"
+                aria-live="assertive" aria-atomic="true" data-bs-delay="1500">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        ¡Producto agregado!
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Cerrar"></button>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="text-white text-center text-lg-start">
+            <div class="container p-4">
+                <div class="row mt-4">
+                    <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase mb-4">SKILLTRADE</h5>
+
+                        <p>
+                            En skilltrade nos importan nuestros usuarios, nos importas tú.
+                            por eso hemos creado un lugar donde puedas compartir tus diversas habilidades
+                        </p>
+
+                        <p>
+                            sumérgete y aprende de lo que quieras, todo en un solo lugar
+                            precios asequibles, intercambia tus curosos, conoce gente. Expande tu mundo!
+                        </p>
+
+                        <div class="mt-4">
+                            <a href="#" class="btn btn-floating btn-light btn-lg">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="#" class="btn btn-floating btn-light btn-lg">
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                            <a href="#" class="btn btn-floating btn-light btn-lg">
+                                <i class="bi bi-google"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase mb-4 pb-1">Contáctanos</h5>
+                        <ul class="fa-ul" style="margin-left: 1.65em;">
+                            <li class="mb-3">
+                                <span class="ms-2">contact@example.com</span>
+                            </li>
+                            <li class="mb-3">
+                                <span class="ms-2">+ 57 314 532 9465</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2025 Copyright: skilltrade skill to be better</a>
+            </div>
+        </footer>
+        <script src="assets/scripts/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

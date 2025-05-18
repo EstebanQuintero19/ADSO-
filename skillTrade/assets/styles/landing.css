@@ -958,19 +958,33 @@ html {
 .card-course .btn-action {
     display: flex;
     width: 100%;
+<<<<<<< HEAD:skillTrade/assets/styles/landing.css
+    gap: 0.5rem;            
+}
+
+.card-course .btn-action .btn-price {
+    flex: 1;                
+=======
     gap: 0.5rem;
 }
 
 .card-course .btn-action .btn-price {
     flex: 1;
+>>>>>>> 4d14aae (se añaden nuevas pantallas, verificar el enrutamiento):SkillTrade/skillTrade/assets/styles/landing.css
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
 .card-course .btn-action .btn-cart {
+<<<<<<< HEAD:skillTrade/assets/styles/landing.css
+    flex: 0 0 20%;          
+    max-width: 20%;
+    padding: 0.6em 1em;     
+=======
     flex: 0 0 20%;
     max-width: 20%;
     padding: 0.6em 1em;
+>>>>>>> 4d14aae (se añaden nuevas pantallas, verificar el enrutamiento):SkillTrade/skillTrade/assets/styles/landing.css
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     text-align: center;
@@ -982,7 +996,11 @@ html {
 }
 
 footer {
+<<<<<<< HEAD:skillTrade/assets/styles/landing.css
+    --s: 200px;      
+=======
     --s: 200px;
+>>>>>>> 4d14aae (se añaden nuevas pantallas, verificar el enrutamiento):SkillTrade/skillTrade/assets/styles/landing.css
     --c1: #1d1d1d;
     --c2: #4e4f51;
     --c3: #3c3c3c;
@@ -994,6 +1012,31 @@ footer {
     position: relative;
     bottom: 0;
     overflow: hidden;
+<<<<<<< HEAD:skillTrade/assets/styles/landing.css
+    color: #fff;     
+
+    background-color: #212121;
+
+background-image:
+    repeating-conic-gradient(
+        from 30deg,
+        transparent 0 120deg,
+        var(--c3)     0 180deg
+    ),
+    repeating-conic-gradient(
+        from 30deg,
+        var(--c1) 0 60deg,
+        var(--c2) 0 120deg,
+        var(--c3) 0 180deg
+    );
+
+
+background-position:
+    calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    0 0;
+background-size:
+    var(--s) calc(var(--s) * 0.577);
+=======
     color: #fff;
 
     background-color: #212121;
@@ -1013,12 +1056,15 @@ footer {
         0 0;
     background-size:
         var(--s) calc(var(--s) * 0.577);
+>>>>>>> 4d14aae (se añaden nuevas pantallas, verificar el enrutamiento):SkillTrade/skillTrade/assets/styles/landing.css
 }
 
 footer p {
     margin: 0;
     color: #fff;
 }
+<<<<<<< HEAD:skillTrade/assets/styles/landing.css
+=======
 
 .btn-tomar-curso {
     background: transparent !important;
@@ -1047,3 +1093,4 @@ footer p {
     filter: blur(1.8em);
     opacity: .3;
 }
+>>>>>>> 4d14aae (se añaden nuevas pantallas, verificar el enrutamiento):SkillTrade/skillTrade/assets/styles/landing.css
