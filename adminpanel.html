@@ -156,9 +156,132 @@
                               <td>$45</td>
                               <td>
                                 <div class="btn-group" role="group" aria-label="Acciones">
-                                  <button class="btn btn-sm btn-primary" title="Ver"><i class="bi bi-eye"></i></button>
-                                  <button class="btn btn-sm btn-warning" title="Editar"><i class="bi bi-pencil"></i></button>
-                                  <button class="btn btn-sm btn-danger" title="Eliminar"><i class="bi bi-trash"></i></button>
+                                  <button class="btn btn-sm btn-primary" title="Ver" data-bs-toggle="modal" data-bs-target="#viewCourseModal-102"><i class="bi bi-eye"></i></button>
+                                  <button class="btn btn-sm btn-warning" title="Editar" data-bs-toggle="modal" data-bs-target="#editCourseModal-102"><i class="bi bi-pencil"></i></button>
+                                  <button class="btn btn-sm btn-danger" title="Eliminar" data-bs-toggle="modal" data-bs-target="#deleteCourseModal-102"><i class="bi bi-trash"></i></button>
+
+                                  <!-- Modal Ver Curso -->
+                                  <div class="modal fade" id="viewCourseModal-102" tabindex="-1" aria-labelledby="viewCourseModalLabel-102" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                      <div class="modal-content">
+                                        <div class="modal-header bg-primary text-white">
+                                          <h5 class="modal-title" id="viewCourseModalLabel-102">Ver Curso: Diseño Gráfico Básico</h5>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                          <dl class="row">
+                                            <dt class="col-sm-3">ID</dt>
+                                            <dd class="col-sm-9">102</dd>
+                                            <dt class="col-sm-3">Nombre</dt>
+                                            <dd class="col-sm-9">Diseño Gráfico Básico</dd>
+                                            <dt class="col-sm-3">Descripción</dt>
+                                            <dd class="col-sm-9">Fundamentos de diseño visual y herramientas</dd>
+                                            <dt class="col-sm-3">Categoría</dt>
+                                            <dd class="col-sm-9">Diseño</dd>
+                                            <dt class="col-sm-3">Fecha</dt>
+                                            <dd class="col-sm-9">2025-04-15</dd>
+                                            <dt class="col-sm-3">Hora</dt>
+                                            <dd class="col-sm-9">09:00</dd>
+                                            <dt class="col-sm-3">Sesiones</dt>
+                                            <dd class="col-sm-9">8</dd>
+                                            <dt class="col-sm-3">Instructor</dt>
+                                            <dd class="col-sm-9">anag</dd>
+                                            <dt class="col-sm-3">Estado</dt>
+                                            <dd class="col-sm-9"><span class="badge bg-secondary">Borrador</span></dd>
+                                            <dt class="col-sm-3">Costo</dt>
+                                            <dd class="col-sm-9">$45</dd>
+                                          </dl>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- Modal Editar Curso -->
+                                  <div class="modal fade" id="editCourseModal-102" tabindex="-1" aria-labelledby="editCourseModalLabel-102" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                      <div class="modal-content">
+                                        <div class="modal-header bg-warning text-dark">
+                                          <h5 class="modal-title" id="editCourseModalLabel-102">Editar Curso: Diseño Gráfico Básico</h5>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                          <form>
+                                            <div class="row g-3">
+                                              <div class="col-md-6">
+                                                <label class="form-label">Nombre</label>
+                                                <input type="text" class="form-control" value="Diseño Gráfico Básico">
+                                              </div>
+                                              <div class="col-md-6">
+                                                <label class="form-label">Categoría</label>
+                                                <select class="form-select">
+                                                  <option selected>Diseño</option>
+                                                  <option>Programación</option>
+                                                  <option>Negocios</option>
+                                                  <option>Arte</option>
+                                                  <option>Música</option>
+                                                  <option>Idiomas</option>
+                                                </select>
+                                              </div>
+                                              <div class="col-12">
+                                                <label class="form-label">Descripción</label>
+                                                <textarea class="form-control" rows="2">Fundamentos de diseño visual y herramientas</textarea>
+                                              </div>
+                                              <div class="col-md-6">
+                                                <label class="form-label">Fecha</label>
+                                                <input type="date" class="form-control" value="2025-04-15">
+                                              </div>
+                                              <div class="col-md-6">
+                                                <label class="form-label">Hora</label>
+                                                <input type="time" class="form-control" value="09:00">
+                                              </div>
+                                              <div class="col-md-6">
+                                                <label class="form-label">Sesiones</label>
+                                                <input type="number" class="form-control" value="8">
+                                              </div>
+                                              <div class="col-md-6">
+                                                <label class="form-label">Instructor</label>
+                                                <input type="text" class="form-control" value="anag">
+                                              </div>
+                                              <div class="col-md-6">
+                                                <label class="form-label">Estado</label>
+                                                <select class="form-select">
+                                                  <option>Publicado</option>
+                                                  <option selected>Borrador</option>
+                                                  <option>En Revisión</option>
+                                                </select>
+                                              </div>
+                                              <div class="col-md-6">
+                                                <label class="form-label">Costo</label>
+                                                <input type="number" class="form-control" value="45">
+                                              </div>
+                                            </div>
+                                            <div class="text-end mt-4">
+                                              <button type="submit" class="btn btn-warning">Guardar Cambios</button>
+                                            </div>
+                                          </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- Modal Eliminar Curso -->
+                                  <div class="modal fade" id="deleteCourseModal-102" tabindex="-1" aria-labelledby="deleteCourseModalLabel-102" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                      <div class="modal-content">
+                                        <div class="modal-header bg-danger text-white">
+                                          <h5 class="modal-title" id="deleteCourseModalLabel-102">Eliminar Curso</h5>
+                                          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                          ¿Estás seguro de que deseas eliminar el curso <strong>Diseño Gráfico Básico</strong>?
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                          <button type="button" class="btn btn-danger">Eliminar</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </td>
                           </tr>
