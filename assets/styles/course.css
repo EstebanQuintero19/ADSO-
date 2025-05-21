@@ -1,9 +1,6 @@
-/* course.css – Estilos para página de curso en SKILLTRADE (Colores ajustados al tema de landing) */
-
 :root {
-  /* Colores principales iguales a la landing */
-  --main-color:    #5b32a6;    /* morado oscuro nav */
-  --accent-color:  #7b5cf4;    /* morado claro botones */
+  --main-color:    #5b32a6;
+  --accent-color:  #7b5cf4;
   --bg-light:      #f5f5f5;
   --text-light:    #212121;
   --muted-color:   #6b7280;
@@ -11,8 +8,6 @@
   --radius:        0.6em;
   --transition:    0.3s ease-in-out;
 }
-
-/* RESET BÁSICO */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   font-family: "Inter", sans-serif;
@@ -20,26 +15,16 @@ body {
   color: var(--text-light);
   line-height: 1.6;
 }
-
-/* CABECERA */
 .navbar {
   background-color: var(--main-color) !important;
 }
 .navbar-brand, .nav-link { color: #fff !important; }
 .nav-link:hover { color: var(--accent-color) !important; }
-
-/* CONTENEDOR */
 .course-page { max-width: 1100px; margin: 5rem auto 2rem; padding: 0 1rem; }
-
-/* BREADCRUMB */
 .breadcrumb { background: transparent; padding: 0; margin-bottom: 1.5rem; }
 .breadcrumb .breadcrumb-item + .breadcrumb-item::before { content: "›"; color: var(--muted-color); margin: 0 0.5rem; }
-
-/* ENCABEZADO DE CURSO */
 .course-header h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
 .course-header .meta { color: var(--muted-color); font-size: 0.9rem; }
-
-/* BOTONES */
 .btn-primary,
 .btn-accent {
   background-color: var(--accent-color);
@@ -61,16 +46,10 @@ body {
   background-color: var(--accent-color);
   color: #fff;
 }
-
-/* RATINGS */
 .course-rating i { color: #fbbf24; margin-right: 0.1rem; }
 .course-rating small { color: var(--muted-color); margin-left: 0.3rem; }
-
-/* SECCIONES */
 .course-section { margin-bottom: 2rem; }
 .course-section h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; }
-
-/* ACORDEÓN */
 .accordion-button {
   background: #fff;
   border: 1px solid var(--border-color);
@@ -80,11 +59,7 @@ body {
   background: var(--accent-color);
   color: #fff;
 }
-
-/* SIDEBAR */
 .course-sidebar { position: sticky; top: 2rem; }
-
-/* TARJETAS */
 .card-course {
   display: flex;
   flex-direction: column;
@@ -101,8 +76,6 @@ body {
 .card-course .btn-action { display: flex; gap: 0.5rem; margin-top: auto; }
 .card-course .btn-price { flex: 1; }
 .card-course .btn-cart { flex: 0 0 20%; }
-
-/* TEMAS RECOMENDADOS */
 .btn-tema {
   padding: 0.4rem 1rem;
   background: #fff;
@@ -117,8 +90,6 @@ body {
   color: #fff;
   transform: translateY(-2px);
 }
-
-/* FOOTER */
 .course-footer {
   margin-top: 4rem;
   text-align: center;
@@ -127,9 +98,44 @@ body {
   padding: 1rem 0;
   border-top: 1px solid var(--border-color);
 }
-
-/* RESPONSIVE */
 @media (max-width: 992px) {
   .course-header { flex-direction: column; }
   .course-sidebar { position: static; margin-top: 2rem; }
 }
+body, p, .card-subtitle-limit h6, .card-text-wrapper, .topics-wrapper, .footer, .navbar, .modal-content {
+    font-family: 'Inter', Arial, sans-serif !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', Arial, sans-serif !important;
+    font-weight: 700 !important;
+    color: #2d2d2d !important;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.75em;
+}
+h2, .h2, .fw-bolder, .fw-bold {
+    font-weight: 800 !important;
+    color: #101010 !important;
+}
+h3, .h3 {
+    font-weight: 700 !important;
+    color: #101010 !important;
+}
+h4, .h4, a {
+    font-weight: 600 !important;
+    color: #101010 !important;
+}
+h5, .h5 {
+    font-weight: 600 !important;
+    color: #101010 !important;
+}
+h6, .h6 {
+    font-weight: 500 !important;
+    color: #101010 !important;
+}
+p, .card-subtitle-limit h6, .modal-body, .footer, .navbar, .topics-wrapper {
+    font-size: 1.05rem;
+    color: #101010 !important;
+    font-weight: 400 !important;
+    line-height: 1.6;
+}
+

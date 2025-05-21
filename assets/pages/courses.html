@@ -8,41 +8,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../styles/landing.css">
-    <link rel="stylesheet" href="../styles/landing-darkmode.css">
-    <link rel="stylesheet" href="../styles/landing-responsive.css">
-    <title>SKILLTRADE - Catálogo de Cursos</title>
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <title>SKILLTRADE - Cursos</title>
 </head>
 
 <body class="bg-light">
-    <!-- Darkmode Toggle -->
-    <button id="toggle-darkmode" class="btn btn-sm btn-light position-fixed"
-        style="bottom:20px; left:20px; z-index:9999;">
-        <i class="bi bi-moon-fill"></i>
-    </button>
-
     <!-- NAVBAR -->
     <header>
-        <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
-            <div class="container">
-                <a class="navbar-brand fw-bold" href="#">SKILLTRADE</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow-sm">
+            <div class="container-fluid navitagion">
+                <a class="navbar-brand fw-bold" href="/index.html">SKILLTRADE</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" href="#destacados">Destacados</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#valorados">Más valorados</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#destacados" id="featured">Destacados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#valorados" id="rated">Más valorados</a>
+                        </li>   
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html">Inicio</a>
+                        </li>   
                     </ul>
-                    <div class="d-flex">
-                        <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#cartModal">
-                            <i class="bi bi-cart"></i>
-                            <span id="cart-count" class="badge bg-danger rounded-pill">0</span>
+                    <form class="d-flex me-3" role="search">
+                        <input class="form-control me-2 rounded-pill" type="search" placeholder="Buscar cursos, temas..." aria-label="Buscar" style="min-width:180px;">
+                        <button class="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center" type="submit" style="width:38px; height:38px;">
+                            <i class="bi bi-search"></i>
                         </button>
-                        <button class="btn btn-outline-primary me-2" data-bs-toggle="modal"
-                            data-bs-target="#loginModal">Iniciar Sesión</button>
-                        <button class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#registerModal">Registrarse</button>
-                    </div>
+                    </form>
+                    <button class="btn btn-outline-primary position-relative me-2 bton-login" data-bs-toggle="modal"
+                        data-bs-target="#cartModal">
+                        <i class="bi bi-cart"></i>
+                        <span id="cart-count"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                            style="font-size:0.75em;">0</span>
+                    </button>
+                    <button class="btn btn-outline-primary me-2 bton-login" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Iniciar Sesión</button>
+                    <button class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#registerModal">Registrarse</button>
                 </div>
             </div>
         </nav>
@@ -55,10 +69,10 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
                 <div class="col-md-4">
                     <div class="card p-3 d-flex flex-column h-100 card-course">
-                        <img src="assets/images/machine-learning.jpg" alt="Machine Learning Básico">
+                        <img src="../images/cocina.jpeg" alt="cocina image">
                         <div class="card-text-wrapper">
                             <div class="card-title-tittle">
-                                <h4 class="fw-semibold">MACHINE LEARNING BÁSICO</h4>
+                                <h4 class="fw-semibold"><a href="course.html">COCINA PARA LOS QUE NO COCINAN</a></h4>
                             </div>
                             <div class="course-rating mb-2">
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -69,7 +83,7 @@
                                 <span class="ms-2 text-muted">(4.5)</span>
                             </div>
                             <div class="card-subtitle-limit">
-                                <h6 class="fw-semibold">Introducción a algoritmos de ML y casos prácticos.</h6>
+                                <h6 class="fw-semibold">Aprende lo escencial en la cocina, viaja por las diferentes gastronomias latinas.</h6>
                             </div>
                         </div>
                         <div class="mt-auto btn-action">
@@ -86,10 +100,10 @@
 
                 <div class="col-md-4">
                     <div class="card p-3 d-flex flex-column h-100 card-course">
-                        <img src="assets/images/ciberseguridad.jpg" alt="Fundamentos de Ciberseguridad">
+                        <img src="../images/ciber-seguridad.jpeg" alt="Fundamentos de Ciberseguridad">
                         <div class="card-text-wrapper">
                             <div class="card-title-tittle">
-                                <h4 class="fw-semibold">FUNDAMENTOS DE CIBERSEGURIDAD</h4>
+                                <h4 class="fw-semibold"><a href="course.html">FUNDAMENTOS DE CIBERSEGURIDAD</a></h4>
                             </div>
                             <div class="course-rating mb-2">
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -117,10 +131,10 @@
 
                 <div class="col-md-4">
                     <div class="card p-3 d-flex flex-column h-100 card-course">
-                        <img src="assets/images/aws-serverless.jpg" alt="Arquitectura Serverless en AWS">
+                        <img src="../images/IA.jpeg" alt="ia image">
                         <div class="card-text-wrapper">
                             <div class="card-title-tittle">
-                                <h4 class="fw-semibold">ARQUITECTURA SERVERLESS EN AWS</h4>
+                                <h4 class="fw-semibold"><a href="course.html">IA - APRENDE LA CONSTUCCIÓN DE LA IA</a></h4>
                             </div>
                             <div class="course-rating mb-2">
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -131,7 +145,7 @@
                                 <span class="ms-2 text-muted">(4.6)</span>
                             </div>
                             <div class="card-subtitle-limit">
-                                <h6 class="fw-semibold">Desarrollo de funciones Lambda y APIs con API Gateway.</h6>
+                                <h6 class="fw-semibold">Aventúrate y atrévete a construir una IA, desde teoría a ejemplos prácticos</h6>
                             </div>
                         </div>
                         <div class="mt-auto btn-action">
@@ -157,7 +171,7 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card p-3 d-flex flex-column h-100 card-course">
-                        <img src="assets/images/java-develop.webp" alt="programación avanzada">
+                        <img src="../images/java-develop.webp" alt="programación avanzada">
                         <div class="card-text-wrapper">
                             <div class="card-title-tittle">
                                 <h4 class="fw-semibold">PROGRAMACIÓN DE CERO A SENIOR EN JAVA</h4>
@@ -189,10 +203,10 @@
 
                 <div class="col-md-4">
                     <div class="card p-3 d-flex flex-column h-100 card-course">
-                        <img src="assets/images/figma-ui.jpg" alt="UX diseño de interfaces">
+                        <img src="../images/figma-ui.jpg" alt="UX diseño de interfaces">
                         <div class="card-text-wrapper">
                             <div class="card-title-tittle">
-                                <h4 class="fw-semibold">DISEÑO UX/UI CON FIGMA</h4>
+                                <h4 class="fw-semibold"><a href="course.html">DISEÑO UX/UI CON FIGMA</a></h4>
                             </div>
                             <div class="course-rating mb-2">
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -221,7 +235,7 @@
 
                 <div class="col-md-4">
                     <div class="card p-3 d-flex flex-column h-100 card-course">
-                        <img src="assets/images/digital-marketing.jpg" alt="SEO y marketing">
+                        <img src="../images/digital-marketing.jpeg" alt="SEO y marketing">
                         <div class="card-text-wrapper">
                             <div class="card-title-tittle">
                                 <h4 class="fw-semibold">SEO Y MARKETING DIGITAL</h4>
@@ -253,10 +267,10 @@
 
                 <div class="col-md-4">
                     <div class="card p-3 d-flex flex-column h-100 card-course">
-                        <img src="assets/images/machine-learning.jpg" alt="Machine Learning Básico">
+                        <img src="../images/machine-learning.jpeg" alt="Machine Learning">
                         <div class="card-text-wrapper">
                             <div class="card-title-tittle">
-                                <h4 class="fw-semibold">Machine Learning Básico</h4>
+                                <h4 class="fw-semibold">MACHINE LEARNING BÁSICO</h4>
                             </div>
                             <div class="course-rating mb-2">
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -282,10 +296,10 @@
 
                 <div class="col-md-4">
                     <div class="card p-3 d-flex flex-column h-100 card-course">
-                        <img src="assets/images/cybersecurity.jpg" alt="Fundamentos de Ciberseguridad">
+                        <img src="../images/ciencia-datos.jpeg" alt="ciencia de datos">
                         <div class="card-text-wrapper">
                             <div class="card-title-tittle">
-                                <h4 class="fw-semibold">Fundamentos de Ciberseguridad</h4>
+                                <h4 class="fw-semibold">CIENCIA DE DATOS</h4>
                             </div>
                             <div class="course-rating mb-2">
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -296,7 +310,7 @@
                                 <span class="ms-2 text-muted">(4.2)</span>
                             </div>
                             <div class="card-subtitle-limit">
-                                <h6 class="fw-semibold">Conceptos clave de seguridad en redes y sistemas.</h6>
+                                <h6 class="fw-semibold">Conceptos claves y primarios sobre la ciencia de datos. Analiza, propone, constuye</h6>
                             </div>
                         </div>
                         <div class="mt-auto btn-action">
@@ -311,10 +325,10 @@
 
                 <div class="col-md-4">
                     <div class="card p-3 d-flex flex-column h-100 card-course">
-                        <img src="assets/images/aws-serverless.jpg" alt="AWS Serverless">
+                        <img src="../images/desarrollo-web.jpeg" alt="AWS Serverless">
                         <div class="card-text-wrapper">
                             <div class="card-title-tittle">
-                                <h4 class="fw-semibold">Arquitectura Serverless en AWS</h4>
+                                <h4 class="fw-semibold">DESARROLLO WEB - DESDE CERO A USO DE FRAMEWORKS</h4>
                             </div>
                             <div class="course-rating mb-2">
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -325,7 +339,7 @@
                                 <span class="ms-2 text-muted">(4.6)</span>
                             </div>
                             <div class="card-subtitle-limit">
-                                <h6 class="fw-semibold">Desarrollo de funciones Lambdas y APIs con API Gateway.</h6>
+                                <h6 class="fw-semibold">Aprende con las tecnologías básicas para luego desarrollar como todo un profesional</h6>
                             </div>
                         </div>
                         <div class="mt-auto btn-action">
@@ -396,6 +410,113 @@
                     </div>
                 </div>
             </div>
+            <div class="topics-wrapper">
+                <div class="topics-fade left-fade"></div>
+                <div class="topics-fade right-fade"></div>
+                <div class="topics-track">
+                    <div class="scroll-content">
+                        <a href="#" class="btn-tema">Desarrollo móvil</a>
+                        <a href="#" class="btn-tema">Fotografía digital</a>
+                        <a href="#" class="btn-tema">Ciberseguridad</a>
+                        <a href="#" class="btn-tema">Finanzas personales</a>
+                        <a href="#" class="btn-tema">Idiomas extranjeros</a>
+                        <a href="#" class="btn-tema">Cocina internacional</a>
+                        <a href="#" class="btn-tema">Gestión de proyectos</a>
+                        <a href="#" class="btn-tema">Inteligencia artificial</a>
+                        <a href="#" class="btn-tema">Desarrollo de videojuegos</a>
+                        <a href="#" class="btn-tema">Redes sociales</a>
+                        <a href="#" class="btn-tema">Animación 3D</a>
+                        <a href="#" class="btn-tema">Educación financiera</a>
+                        <a href="#" class="btn-tema">Psicología positiva</a>
+                        <a href="#" class="btn-tema">Energías renovables</a>
+                        <a href="#" class="btn-tema">Programación web</a>
+                        <a href="#" class="btn-tema">Diseño de interiores</a>
+                        <a href="#" class="btn-tema">Escritura creativa</a>
+                        <a href="#" class="btn-tema">Mecatrónica</a>
+                        <a href="#" class="btn-tema">Gestión ambiental</a>
+                        <a href="#" class="btn-tema">Blockchain</a>
+                        <a href="#" class="btn-tema">Robótica educativa</a>
+                        <a href="#" class="btn-tema">Nutrición deportiva</a>
+                        <!-- Duplicado para scroll infinito -->
+                        <a href="#" class="btn-tema">Desarrollo móvil</a>
+                        <a href="#" class="btn-tema">Fotografía digital</a>
+                        <a href="#" class="btn-tema">Ciberseguridad</a>
+                        <a href="#" class="btn-tema">Finanzas personales</a>
+                        <a href="#" class="btn-tema">Idiomas extranjeros</a>
+                        <a href="#" class="btn-tema">Cocina internacional</a>
+                        <a href="#" class="btn-tema">Gestión de proyectos</a>
+                        <a href="#" class="btn-tema">Inteligencia artificial</a>
+                        <a href="#" class="btn-tema">Desarrollo de videojuegos</a>
+                        <a href="#" class="btn-tema">Redes sociales</a>
+                        <a href="#" class="btn-tema">Animación 3D</a>
+                        <a href="#" class="btn-tema">Educación financiera</a>
+                        <a href="#" class="btn-tema">Psicología positiva</a>
+                        <a href="#" class="btn-tema">Energías renovables</a>
+                        <a href="#" class="btn-tema">Programación web</a>
+                        <a href="#" class="btn-tema">Diseño de interiores</a>
+                        <a href="#" class="btn-tema">Escritura creativa</a>
+                        <a href="#" class="btn-tema">Mecatrónica</a>
+                        <a href="#" class="btn-tema">Gestión ambiental</a>
+                        <a href="#" class="btn-tema">Blockchain</a>
+                        <a href="#" class="btn-tema">Robótica educativa</a>
+                        <a href="#" class="btn-tema">Nutrición deportiva</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="topics-wrapper">
+                <div class="topics-fade left-fade"></div>
+                <div class="topics-fade right-fade"></div>
+                <div class="topics-track">
+                    <div class="scroll-content">
+                        <a href="#" class="btn-tema">Desarrollo de apps móviles</a>
+                        <a href="#" class="btn-tema">Edición fotográfica</a>
+                        <a href="#" class="btn-tema">Seguridad informática</a>
+                        <a href="#" class="btn-tema">Ahorro e inversión</a>
+                        <a href="#" class="btn-tema">Aprendizaje de idiomas</a>
+                        <a href="#" class="btn-tema">Cocina gourmet</a>
+                        <a href="#" class="btn-tema">Gestión de equipos</a>
+                        <a href="#" class="btn-tema">Machine Learning</a>
+                        <a href="#" class="btn-tema">Creación de videojuegos</a>
+                        <a href="#" class="btn-tema">Community management</a>
+                        <a href="#" class="btn-tema">Modelado 3D</a>
+                        <a href="#" class="btn-tema">Finanzas para emprendedores</a>
+                        <a href="#" class="btn-tema">Psicología aplicada</a>
+                        <a href="#" class="btn-tema">Energía solar</a>
+                        <a href="#" class="btn-tema">Desarrollo web avanzado</a>
+                        <a href="#" class="btn-tema">Decoración de interiores</a>
+                        <a href="#" class="btn-tema">Narrativa creativa</a>
+                        <a href="#" class="btn-tema">Robótica básica</a>
+                        <a href="#" class="btn-tema">Sostenibilidad ambiental</a>
+                        <a href="#" class="btn-tema">Criptomonedas</a>
+                        <a href="#" class="btn-tema">Educación STEM</a>
+                        <a href="#" class="btn-tema">Nutrición y bienestar</a>
+                        <!-- Duplicado para scroll infinito -->
+                        <a href="#" class="btn-tema">Desarrollo de apps móviles</a>
+                        <a href="#" class="btn-tema">Edición fotográfica</a>
+                        <a href="#" class="btn-tema">Seguridad informática</a>
+                        <a href="#" class="btn-tema">Ahorro e inversión</a>
+                        <a href="#" class="btn-tema">Aprendizaje de idiomas</a>
+                        <a href="#" class="btn-tema">Cocina gourmet</a>
+                        <a href="#" class="btn-tema">Gestión de equipos</a>
+                        <a href="#" class="btn-tema">Machine Learning</a>
+                        <a href="#" class="btn-tema">Creación de videojuegos</a>
+                        <a href="#" class="btn-tema">Community management</a>
+                        <a href="#" class="btn-tema">Modelado 3D</a>
+                        <a href="#" class="btn-tema">Finanzas para emprendedores</a>
+                        <a href="#" class="btn-tema">Psicología aplicada</a>
+                        <a href="#" class="btn-tema">Energía solar</a>
+                        <a href="#" class="btn-tema">Desarrollo web avanzado</a>
+                        <a href="#" class="btn-tema">Decoración de interiores</a>
+                        <a href="#" class="btn-tema">Narrativa creativa</a>
+                        <a href="#" class="btn-tema">Robótica básica</a>
+                        <a href="#" class="btn-tema">Sostenibilidad ambiental</a>
+                        <a href="#" class="btn-tema">Criptomonedas</a>
+                        <a href="#" class="btn-tema">Educación STEM</a>
+                        <a href="#" class="btn-tema">Nutrición y bienestar</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -409,7 +530,7 @@
 
                 <div class="modal-body p-5">
                     <div class="text-center mb-4 image-login-user">
-                        <img class="image-user" src="assets/images/human-profile-purple.png"
+                        <img class="image-user" src="../images/human-profile-purple.png"
                             alt="Foto de perfil de ejemplo">
                     </div>
 
@@ -458,7 +579,7 @@
                 <div class="modal-body p-5">
 
                     <div class="text-center mb-4 image-login-user">
-                        <img class="image-user" src="assets/images/logo_skill.png" alt="Foto de perfil de ejemplo">
+                        <img class="image-user" src="../images/logo_skill.png" alt="Foto de perfil de ejemplo">
                     </div>
 
                     <div class="container-title-login-modal">
@@ -509,27 +630,35 @@
 
     <!-- Modal del Carrito -->
     <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title fw-bold" id="cartModalLabel">Tu Carrito</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content position-relative">
+
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal"
+                    aria-label="Cerrar"></button>
+
+                <div class="modal-body p-5">
+                    <div class="text-center mb-4 image-login-user">
+                        <img class="image-user" src="../images/logo_skill.png" alt="Carrito de compras">
+                    </div>
+
+                    <div class="container-title-login-modal">
+                        <h5 id="cartModalLabel" class="text-center fw-bolder mb-2 title-login-modal">Tu Carrito</h5>
+                    </div>
+
                     <ul id="cart-items" class="list-group mb-3">
                     </ul>
-                    <div class="d-flex justify-content-between fw-bold">
+                    <div class="d-flex justify-content-between fw-bold mb-4">
                         <span>Total:</span>
                         <span id="cart-total">COP 0</span>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                        Seguir comprando
-                    </button>
-                    <button type="button" class="btn btn-primary btn-cart">
-                        Proceder al pago
-                    </button>
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-secondary flex-fill" data-bs-dismiss="modal">
+                            Seguir comprando
+                        </button>
+                        <button type="button" class="btn btn-primary flex-fill btn-cart">
+                            Proceder al pago
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -592,7 +721,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/scripts/index.js"></script>
+    <script src="../scripts/index.js"></script>
 </body>
 
 </html>

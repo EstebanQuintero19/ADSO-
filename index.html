@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/styles/landing.css">
     <link rel="stylesheet" href="assets/styles/landing-darkmode.css">
-    <link rel="stylesheet" href="assets/styles/landing-responsive.css">
+    <link rel="stylesheet" href="assets/styles/responsive.css">
     <title>SKILLTRADE</title>
 </head>
 
@@ -28,6 +28,11 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -40,15 +45,21 @@
                             <a class="nav-link" href="#testimonios" id="testimonial">Testimonios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#testimonios" id="testimonial">Explorar</a>
+                            <a class="nav-link" href="../assets/pages/courses.html" id="explore">Explorar</a>
                         </li>
                     </ul>
-                    <button class="btn btn-outline-primary me-2 bton-login" data-bs-toggle="modal"
+                    <form class="d-flex me-3" role="search">
+                        <input class="form-control me-2 rounded-pill" type="search" placeholder="Buscar cursos, temas..." aria-label="Buscar" style="min-width:180px;">
+                        <button class="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center" type="submit" style="width:38px; height:38px;">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </form>
+                    <button class="btn btn-outline-primary position-relative me-2 bton-login" data-bs-toggle="modal"
                         data-bs-target="#cartModal">
                         <i class="bi bi-cart"></i>
                         <span id="cart-count"
-        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-    0
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                            style="font-size:0.75em;">0</span>
                     </button>
                     <button class="btn btn-outline-primary me-2 bton-login" data-bs-toggle="modal"
                         data-bs-target="#loginModal">Iniciar Sesión</button>
@@ -404,6 +415,115 @@
                         <a href="#" class="btn-tema">Robótica</a>
                         <a href="#" class="btn-tema">UX/UI</a>
                         <a href="#" class="btn-tema">Cocina saludable</a>
+                    </div>
+                </div>
+            </div>
+
+        <!-- TOPICS -->
+            <div class="topics-wrapper">
+                <div class="topics-fade left-fade"></div>
+                <div class="topics-fade right-fade"></div>
+                <div class="topics-track">
+                    <div class="scroll-content">
+                        <a href="#" class="btn-tema">Desarrollo móvil</a>
+                        <a href="#" class="btn-tema">Fotografía digital</a>
+                        <a href="#" class="btn-tema">Ciberseguridad</a>
+                        <a href="#" class="btn-tema">Finanzas personales</a>
+                        <a href="#" class="btn-tema">Idiomas extranjeros</a>
+                        <a href="#" class="btn-tema">Cocina internacional</a>
+                        <a href="#" class="btn-tema">Gestión de proyectos</a>
+                        <a href="#" class="btn-tema">Inteligencia artificial</a>
+                        <a href="#" class="btn-tema">Desarrollo de videojuegos</a>
+                        <a href="#" class="btn-tema">Redes sociales</a>
+                        <a href="#" class="btn-tema">Animación 3D</a>
+                        <a href="#" class="btn-tema">Educación financiera</a>
+                        <a href="#" class="btn-tema">Psicología positiva</a>
+                        <a href="#" class="btn-tema">Energías renovables</a>
+                        <a href="#" class="btn-tema">Programación web</a>
+                        <a href="#" class="btn-tema">Diseño de interiores</a>
+                        <a href="#" class="btn-tema">Escritura creativa</a>
+                        <a href="#" class="btn-tema">Mecatrónica</a>
+                        <a href="#" class="btn-tema">Gestión ambiental</a>
+                        <a href="#" class="btn-tema">Blockchain</a>
+                        <a href="#" class="btn-tema">Robótica educativa</a>
+                        <a href="#" class="btn-tema">Nutrición deportiva</a>
+                        <!-- Duplicado para scroll infinito -->
+                        <a href="#" class="btn-tema">Desarrollo móvil</a>
+                        <a href="#" class="btn-tema">Fotografía digital</a>
+                        <a href="#" class="btn-tema">Ciberseguridad</a>
+                        <a href="#" class="btn-tema">Finanzas personales</a>
+                        <a href="#" class="btn-tema">Idiomas extranjeros</a>
+                        <a href="#" class="btn-tema">Cocina internacional</a>
+                        <a href="#" class="btn-tema">Gestión de proyectos</a>
+                        <a href="#" class="btn-tema">Inteligencia artificial</a>
+                        <a href="#" class="btn-tema">Desarrollo de videojuegos</a>
+                        <a href="#" class="btn-tema">Redes sociales</a>
+                        <a href="#" class="btn-tema">Animación 3D</a>
+                        <a href="#" class="btn-tema">Educación financiera</a>
+                        <a href="#" class="btn-tema">Psicología positiva</a>
+                        <a href="#" class="btn-tema">Energías renovables</a>
+                        <a href="#" class="btn-tema">Programación web</a>
+                        <a href="#" class="btn-tema">Diseño de interiores</a>
+                        <a href="#" class="btn-tema">Escritura creativa</a>
+                        <a href="#" class="btn-tema">Mecatrónica</a>
+                        <a href="#" class="btn-tema">Gestión ambiental</a>
+                        <a href="#" class="btn-tema">Blockchain</a>
+                        <a href="#" class="btn-tema">Robótica educativa</a>
+                        <a href="#" class="btn-tema">Nutrición deportiva</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="topics-wrapper">
+                <div class="topics-fade left-fade"></div>
+                <div class="topics-fade right-fade"></div>
+                <div class="topics-track">
+                    <div class="scroll-content">
+                        <a href="#" class="btn-tema">Desarrollo de apps móviles</a>
+                        <a href="#" class="btn-tema">Edición fotográfica</a>
+                        <a href="#" class="btn-tema">Seguridad informática</a>
+                        <a href="#" class="btn-tema">Ahorro e inversión</a>
+                        <a href="#" class="btn-tema">Aprendizaje de idiomas</a>
+                        <a href="#" class="btn-tema">Cocina gourmet</a>
+                        <a href="#" class="btn-tema">Gestión de equipos</a>
+                        <a href="#" class="btn-tema">Machine Learning</a>
+                        <a href="#" class="btn-tema">Creación de videojuegos</a>
+                        <a href="#" class="btn-tema">Community management</a>
+                        <a href="#" class="btn-tema">Modelado 3D</a>
+                        <a href="#" class="btn-tema">Finanzas para emprendedores</a>
+                        <a href="#" class="btn-tema">Psicología aplicada</a>
+                        <a href="#" class="btn-tema">Energía solar</a>
+                        <a href="#" class="btn-tema">Desarrollo web avanzado</a>
+                        <a href="#" class="btn-tema">Decoración de interiores</a>
+                        <a href="#" class="btn-tema">Narrativa creativa</a>
+                        <a href="#" class="btn-tema">Robótica básica</a>
+                        <a href="#" class="btn-tema">Sostenibilidad ambiental</a>
+                        <a href="#" class="btn-tema">Criptomonedas</a>
+                        <a href="#" class="btn-tema">Educación STEM</a>
+                        <a href="#" class="btn-tema">Nutrición y bienestar</a>
+                        <!-- Duplicado para scroll infinito -->
+                        <a href="#" class="btn-tema">Desarrollo de apps móviles</a>
+                        <a href="#" class="btn-tema">Edición fotográfica</a>
+                        <a href="#" class="btn-tema">Seguridad informática</a>
+                        <a href="#" class="btn-tema">Ahorro e inversión</a>
+                        <a href="#" class="btn-tema">Aprendizaje de idiomas</a>
+                        <a href="#" class="btn-tema">Cocina gourmet</a>
+                        <a href="#" class="btn-tema">Gestión de equipos</a>
+                        <a href="#" class="btn-tema">Machine Learning</a>
+                        <a href="#" class="btn-tema">Creación de videojuegos</a>
+                        <a href="#" class="btn-tema">Community management</a>
+                        <a href="#" class="btn-tema">Modelado 3D</a>
+                        <a href="#" class="btn-tema">Finanzas para emprendedores</a>
+                        <a href="#" class="btn-tema">Psicología aplicada</a>
+                        <a href="#" class="btn-tema">Energía solar</a>
+                        <a href="#" class="btn-tema">Desarrollo web avanzado</a>
+                        <a href="#" class="btn-tema">Decoración de interiores</a>
+                        <a href="#" class="btn-tema">Narrativa creativa</a>
+                        <a href="#" class="btn-tema">Robótica básica</a>
+                        <a href="#" class="btn-tema">Sostenibilidad ambiental</a>
+                        <a href="#" class="btn-tema">Criptomonedas</a>
+                        <a href="#" class="btn-tema">Educación STEM</a>
+                        <a href="#" class="btn-tema">Nutrición y bienestar</a>
                     </div>
                 </div>
             </div>

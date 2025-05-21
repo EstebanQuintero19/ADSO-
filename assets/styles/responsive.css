@@ -1,4 +1,3 @@
-/* Tablet */
 @media (max-width: 991.98px) {
     .hero-banner h1 {
         font-size: 2.5rem;
@@ -18,7 +17,6 @@
     }
 }
 
-/* Teléfonose */
 @media (max-width: 767.98px) {
     .hero-banner h1 {
         font-size: 2rem;
@@ -86,7 +84,6 @@
     }
 }
 
-/* Pantallas grandes */
 @media (min-width: 1200px) {
     .hero-banner h1 {
         font-size: 4rem;
@@ -120,7 +117,6 @@
     }
 }
 
-/* Pantallas muy grandes */
 @media (min-width: 1400px) {
     .container {
         max-width: 1320px;
@@ -174,4 +170,109 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+.card-course img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+@media (max-width: 991.98px) {
+    .navbar .container-fluid {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-collapse {
+        width: 100%;
+    }
+    .bton-login {
+        margin-bottom: 8px;
+    }
+}
+@media (max-width: 767.98px) {
+    .card-course img {
+        height: 140px;
+    }
+    .topics-wrapper {
+        margin-bottom: 1.5rem;
+    }
+    .importan-courses .row > [class^="col-"] {
+        margin-bottom: 1.5rem;
+    }
+    .footer .container {
+        padding: 1rem 0.5rem;
+    }
+}
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    .card-course {
+        padding: 1rem !important;
+    }
+    .card-title-tittle h4 {
+        font-size: 1rem;
+    }
+    .btn-price, .btn-cart {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.7rem;
+    }
+    .topics-track {
+        padding: 0 0.5rem;
+    }
+    .modal-body.p-5 {
+        padding: 2rem !important;
+    }
+    .footer .container {
+        padding: 0.5rem 0.2rem;
+    }
+}
+.topics-track {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+.scroll-content {
+    display: inline-block;
+    min-width: 100%;
+}
+.btn-tema {
+    display: inline-block;
+    margin: 0.25rem 0.5rem 0.25rem 0;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 20px;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.btn-tema:hover {
+    background: #e2e6ea;
+}
+@media (max-width: 575.98px) {
+    .topics-fade {
+        display: none !important;
+    }
+}
+@media (max-width: 575.98px) {
+    .modal-dialog {
+        max-width: 95vw;
+        margin: 1.75rem auto;
+    }
+}
+@media (max-width: 767.98px) {
+    footer .row > div {
+        text-align: center !important;
+    }
+}
+#btn-scroll-top {
+    right: 10px !important;
+    bottom: 60px !important;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    padding: 0;
 }
